@@ -1,5 +1,4 @@
 # First Project: A Simple Calculator
-
 import Operations
 
 # تنظيم الرموز على شك لقائمة
