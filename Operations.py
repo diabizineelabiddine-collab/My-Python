@@ -82,8 +82,25 @@ def show_goodbye_message():
 def list_to_string(variable):
     return ', '.join(variable)
 
+# التحقق من إدخال المستخدم لعدد صحيح موجب
+def get_positive_number(message):
+    while True:
+        try:
+            number = int(input(message))
 
+            if number < 0:
+               raise ValueError('Please enter a positive number.')
 
+            return number
 
+        except ValueError:
+            show_invalid_input_error()
 
+# التحقق مما إذا كان المستخدم يرغب في مواصلة العملية أو لا وإرجاع قيمة منطقية (True أو False)
+def continue_operation():
+ while True:
+    choice = input(f'\nWould you like to continue? (Yes/No): ').strip().lower()
+    if choice in ['yes', 'no']:
+        return choice == 'yes'
+    print('Please enter yes or no.')
 

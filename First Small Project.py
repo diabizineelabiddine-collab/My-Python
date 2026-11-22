@@ -1,4 +1,5 @@
 # First Project: A Simple Calculator
+
 import Operations
 
 # تنظيم الرموز على شك لقائمة
@@ -56,10 +57,5 @@ while True:
  # عرض رسالة شكر
  Operations.show_goodbye_message()
 
- choice = input(f'\nWould you like to continue? (Yes/No): ').strip().lower()
-
- if choice  != 'yes':
-     print('\nAlright, as you wish, and thank you once again for using my program!')
+ if not Operations.continue_operation():
      break
-
-
